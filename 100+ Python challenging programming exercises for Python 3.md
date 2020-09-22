@@ -25,20 +25,26 @@ Consider use dict()
 ```python
 print('Enter "q" to exit.')
 
-numbers = {}
+number_square = {}
 while True:
-  user_number = (input('Enter an integer: '))
+  user_input = (input('Enter an integer: '))
 
-  if user_number.lower() == 'q':
-    break
+  if user_input.lower() == 'q':
+    break    
+
+  if user_input.isdigit():
+    user_number = int(user_input)
   else:
-    user_number = int(user_number)
+    print(f'Entered value "{user_input}" is not an integer.')
+    continue
 
   for i in range(1, user_number+1):
-    numbers[user_number] = i*i
+    number_square[user_number] = i*i
 
-print('\nPrinting the results\n...\n')
-
-for key, value in numbers.items():
-  print(f'{key}: {value}')
+if number_square:
+  print('\nPrinting the results\n...')
+  for key, value in number_square.items():
+    print(f'{key}: {value}')
+else:
+  print('\nYou didn\'t enter any number.')
 ```
