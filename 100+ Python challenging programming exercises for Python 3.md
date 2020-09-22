@@ -43,8 +43,10 @@ while True:
 
 if number_square:
   print('\nPrinting the results\n...')
+  
   for key, value in number_square.items():
     print(f'{key}: {value}')
+    
 else:
   print('\nYou didn\'t enter any number.')
 ```
