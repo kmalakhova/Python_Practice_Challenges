@@ -42,11 +42,9 @@ while True:
     number_square[user_number] = i*i
 
 if number_square:
-  print('\nPrinting the results\n...')
-  
+  print('\nPrinting the results\n...') 
   for key, value in number_square.items():
-    print(f'{key}: {value}')
-    
+    print(f'{key}: {value}')    
 else:
   print('\nYou didn\'t enter any number.')
 ```
